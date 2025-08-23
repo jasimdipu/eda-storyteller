@@ -1,0 +1,19 @@
+## Shared package
+
+
+### `shared/pyproject.toml`
+
+[project]
+name = "eda-shared"
+version = "0.1.0"
+description = "Shared schemas and utilities for EDA Storyteller"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2",
+    "boto3",
+]
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

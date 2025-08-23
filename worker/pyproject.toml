@@ -1,0 +1,18 @@
+[project]
+name = "eda-worker"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "celery[redis]",
+    "polars",
+    "duckdb",
+    "pandas",
+    "pyarrow",
+    "boto3",
+    "eda-shared @ file:///app/shared",
+]
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
