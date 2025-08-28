@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import List
-from shared.schemas.actions import Actions, Suggestion, CodeSnippet
-from shared.schemas.profile import DatasetProfile
+from shared.shared.schemas.actions import Actions, Suggestion, CodeSnippet
+from shared.shared.schemas.profile import DatasetProfile
 
 
 def plan_actions(profile: DatasetProfile) -> Actions:

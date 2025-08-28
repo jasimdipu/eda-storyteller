@@ -2,10 +2,11 @@ from __future__ import annotations
 from typing import List, Literal, Optional, Dict, Any
 from pydantic import BaseModel, Field
 
+SCHEMA_VERSION = "0.1.1"
 
 SuggestionType = Literal[
-"fix_dtype", "impute", "drop_outliers", "encode", "normalize",
-"ts_model_hint", "data_quality_check", "deduplicate"
+    "fix_dtype", "impute", "drop_outliers", "encode", "normalize",
+    "ts_model_hint", "data_quality_check", "deduplicate"
 ]
 
 
@@ -24,6 +25,7 @@ class Suggestion(BaseModel):
 
 
 class Actions(BaseModel):
+    schema_version: str = Field(default=SCHEMA_VERSION)
     priority: Literal["high", "medium", "low"] = "medium"
     suggestions: List[Suggestion] = Field(default_factory=list)
     code_snippets: List[CodeSnippet] = Field(default_factory=list)

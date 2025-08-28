@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1.1",
+  "priority": "medium",
+  "suggestions": [
+    {"type": "impute", "column": "price", "strategy": "median", "reason": "10% missing"},
+    {"type": "deduplicate", "strategy": "drop_duplicates"}
+  ],
+  "code_snippets": []
+}

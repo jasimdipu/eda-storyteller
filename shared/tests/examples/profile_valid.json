@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.1.1",
+  "dataset": {"rows": 1000, "cols": 5},
+  "columns": {
+    "price": {"dtype": "float64", "missing_rate": 0.1, "unique_rate": 0.9, "skew": 1.2, "outlier_rate": 0.06},
+    "color": {"dtype": "category", "cardinality": 12}
+  },
+  "quality": {"duplicates_rate": 0.02},
+  "timeseries": {"detected": false}
+}
