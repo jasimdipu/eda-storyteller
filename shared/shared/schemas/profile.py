@@ -1,7 +1,10 @@
 from __future__ import annotations
-from typing import List, Dict, Optional, Any
-from pydantic import BaseModel
 
+from email.policy import default
+from typing import List, Dict, Optional, Any
+from pydantic import BaseModel, Field
+
+SCHEMA_VERSION = "0.1.1"
 
 class ColumnProfile(BaseModel):
     dtype: str
@@ -30,6 +33,7 @@ class QualitySection(BaseModel):
 
 
 class DatasetProfile(BaseModel):
+    schema_version: str = Field(default=SCHEMA_VERSION)
     dataset: DatasetSection
     columns: Dict[str, ColumnProfile]
     relationships: Dict[str, Any] | None = None

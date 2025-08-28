@@ -1,7 +1,7 @@
 from __future__ import annotations
 from fastapi import FastAPI
 from pydantic import BaseModel
-from shared.schemas.actions import Actions
+from shared.shared.schemas.actions import Actions
 
 app = FastAPI(title="EDA Apply", version="0.1.0")
 

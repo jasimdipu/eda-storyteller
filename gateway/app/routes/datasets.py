@@ -2,7 +2,7 @@ from __future__ import annotations
 import uuid
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from shared.schemas import DatasetProfile
+from shared.shared.schemas import DatasetProfile
 
 
 router = APIRouter(tags=["datasets"])

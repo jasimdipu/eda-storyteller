@@ -1,8 +1,8 @@
 from __future__ import annotations
 from fastapi import FastAPI
 from pydantic import BaseModel
-from shared.schemas.profile import DatasetProfile
-from shared.schemas.actions import Actions
+from shared.shared.schemas.profile import DatasetProfile
+from shared.shared.schemas.actions import Actions
 from .rules import plan_actions
 
 app = FastAPI(title="EDA Insights", version="0.1.0")
